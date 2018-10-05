@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ItemPreview from '../ItemPreview/ItemPreview'
+import './Gallery.css'
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Gallery extends React.Component {
   }
 
   render() {
-    return <div>{this.renderContent()}</div>;
+    return <div className="Gallery">{this.renderContent()}</div>;
   }
 }
 
