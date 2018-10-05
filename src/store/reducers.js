@@ -1,5 +1,10 @@
 import { combineReducers } from 'redux';
-import { FETCH_PHOTOS, OPEN_MODAL, CLOSE_MODAL } from './types';
+import {
+  FETCH_PHOTOS,
+  OPEN_MODAL,
+  CLOSE_MODAL,
+  ADD_USER_COMMENT,
+} from './types';
 
 const initialDataState = {
   items: [],
@@ -14,6 +19,20 @@ const dataReducer = (state = initialDataState, action) => {
   switch (action.type) {
     case FETCH_PHOTOS:
       return action.payload || false;
+    case ADD_USER_COMMENT:
+      return state.map(item => {
+        if (item.id !== action.itemId) return item;
+        return {
+          ...item,
+          userComments: [
+            ...(item.userComments || []),
+            {
+              id: action.comment.id,
+              value: action.comment.value,
+            },
+          ],
+        };
+      });
     default:
       return state;
   }
@@ -24,12 +43,12 @@ const uiReducer = (state = initialUiState, action) => {
     case OPEN_MODAL:
       return Object.assign({}, state, {
         show: true,
-        item: action.item,
+        id: action.id,
       });
     case CLOSE_MODAL:
       return Object.assign({}, state, {
         show: false,
-        item: null,
+        id: null,
       });
     default:
       return state;

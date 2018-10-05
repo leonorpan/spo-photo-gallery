@@ -1,0 +1,46 @@
+.Item-Details {
+  display: inline-block;
+  color: #000;
+  text-align: start;
+}
+
+.Item-Details h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.Item-Img {
+  display: block;
+  max-width: 100%;
+  align-self: center;
+}
+
+.Item-Img img {
+  display: flex;
+  max-width: 100%;
+}
+
+.Item-Info {
+  padding: 40px 10px;
+}
+
+.Item-Tags {
+  margin-bottom: 30px;
+}
+
+.Item-CommentsList ul {
+  list-style: none;
+  padding-left: 0;
+  color: #000;
+}
+
+.Item-CommentsList ul li {
+  border: 1px solid #114b5f;
+  padding: 10px 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.Item-Comment {
+  margin-bottom: 30px;
+}

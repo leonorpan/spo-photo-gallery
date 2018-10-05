@@ -1,4 +1,10 @@
-import { FETCH_PHOTOS, OPEN_MODAL, CLOSE_MODAL } from './types';
+import {
+  ADD_USER_COMMENT,
+  FETCH_PHOTOS,
+  OPEN_MODAL,
+  CLOSE_MODAL,
+} from './types';
+import { v1 } from 'uuid';
 import { fetchItems } from '../middleware/api';
 
 const fetchPhotos = () => dispatch => {
@@ -10,16 +16,25 @@ const fetchPhotos = () => dispatch => {
   });
 };
 
-const openModal = item => ({
+const addComment = (text, itemId) => ({
+  type: ADD_USER_COMMENT,
+  itemId,
+  comment: {
+    id: v1(),
+    value: text,
+  },
+});
+
+const openModal = id => ({
   type: OPEN_MODAL,
   show: true,
-  item,
+  id,
 });
 
 const closeModal = () => ({
   type: CLOSE_MODAL,
   show: false,
-  item: null,
+  id: null,
 });
 
-export { fetchPhotos, openModal, closeModal };
+export { fetchPhotos, openModal, closeModal, addComment };
