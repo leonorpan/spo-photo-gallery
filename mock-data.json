@@ -1,5 +1,5 @@
 {
-    "/photos": {
+    "/api": {
         "get": {
             "totalHits": 500,
             "hits": [
