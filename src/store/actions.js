@@ -1,4 +1,4 @@
-import { FETCH_PHOTOS } from './types';
+import { FETCH_PHOTOS, OPEN_MODAL } from './types';
 import { fetchItems } from '../middleware/api';
 
 const fetchPhotos = () => dispatch => {
@@ -10,4 +10,10 @@ const fetchPhotos = () => dispatch => {
   });
 };
 
-export { fetchPhotos };
+const openModal = item => ({
+  type: OPEN_MODAL,
+  show: true,
+  item,
+});
+
+export { fetchPhotos, openModal };
