@@ -1,0 +1,22 @@
+.Header {
+    background: #114b5f;
+    color: #88d498;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .Header-Title {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  
+  .Header-Link {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .Header-Link:hover {
+    color: #1a936f;
+  }
+  

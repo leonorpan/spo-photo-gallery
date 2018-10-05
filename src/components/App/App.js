@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Gallery from '../Gallery/Gallery';
+import Header from '../Header/Header'
 import * as actions from '../../store/actions';
 import './App.css';
 
@@ -12,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <header className="App-header">Header!</header>
+        <Header />
         <main>
           <Gallery />
         </main>
