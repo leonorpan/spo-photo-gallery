@@ -1,21 +1,21 @@
 .Item-Preview {
-    display: inline-block;
-    padding: 10px 6px;
+  display: inline-block;
+  padding: 10px 6px;
 }
 
 .Item-Preview-Wrapper {
-    background: #114b5f;
-    display: flex;
+  background: #114b5f;
+  display: flex;
 }
 
 .Item-Preview img {
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    opacity: 1;
-    border-radius: 2px;
-    border: 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+  border-radius: 2px;
+  border: 0;
 }
-  
-  .Item-Preview img:hover  {
-    opacity: 0.5;
-  }
+
+.Item-Preview img:hover {
+  opacity: 0.5;
+}

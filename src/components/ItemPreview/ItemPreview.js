@@ -9,9 +9,9 @@ class ItemPreview extends React.Component {
   render() {
     return (
       <div className="Item-Preview" onClick={this.props.onImageClick}>
-      <div className="Item-Preview-Wrapper">
+        <div className="Item-Preview-Wrapper">
           <img src={this.props.Image} alt="" />
-          </div>
+        </div>
       </div>
     );
   }
