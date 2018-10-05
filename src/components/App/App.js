@@ -5,10 +5,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-            Header!
-        </header>
-        <main></main>
+        <header className="App-header">Header!</header>
+        <main />
       </div>
     );
   }
