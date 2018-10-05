@@ -12,7 +12,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --config .prettierrc --write 'src/**/*.{js,jsx,css}'"
+    "format": "prettier --config .prettierrc --write 'src/**/*.{js,jsx,css}'",
+    "mock-server": "mock-json-server mock-data.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,6 +25,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "mock-json-server": "^1.0.0",
     "prettier": "^1.14.3"
   }
 }
