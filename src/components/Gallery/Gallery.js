@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import ItemPreview from '../ItemPreview/ItemPreview'
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Gallery extends React.Component {
     return (
       this.props.items.length &&
       this.props.items.map(item => {
-        return <div key={item.id}>{item.id}</div>;
+        return <ItemPreview key={item.id} Image={item.previewURL} onImageClick={() => {}} />
       })
     );
   }
