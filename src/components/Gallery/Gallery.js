@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ItemPreview from '../ItemPreview/ItemPreview';
 import Modal from '../Modal/Modal';
-import { openModal } from '../../store/actions';
+import { openModal, closeModal } from '../../store/actions';
 import './Gallery.css';
 
 class Gallery extends React.Component {
@@ -29,7 +29,9 @@ class Gallery extends React.Component {
   render() {
     return (
       <div className="Gallery">
-        <Modal show={this.props.ui.show} handleClose={() => {}}>
+        <Modal
+          show={this.props.ui.show}
+          handleClose={() => this.props.closeModal()}>
           {this.props.ui.item && <p>{this.props.ui.item.id}</p>}
         </Modal>
         {this.renderContent()}
@@ -47,6 +49,7 @@ const mapStateToProps = ({ items, ui }) => {
 
 const mapDispatchToProps = dispatch => ({
   openModal: item => dispatch(openModal(item)),
+  closeModal: () => dispatch(closeModal()),
 });
 
 export default connect(

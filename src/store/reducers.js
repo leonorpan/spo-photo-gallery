@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { FETCH_PHOTOS, OPEN_MODAL } from './types';
+import { FETCH_PHOTOS, OPEN_MODAL, CLOSE_MODAL } from './types';
 
 const initialDataState = {
   items: [],
@@ -20,12 +20,16 @@ const dataReducer = (state = initialDataState, action) => {
 };
 
 const uiReducer = (state = initialUiState, action) => {
-  console.log(action);
   switch (action.type) {
     case OPEN_MODAL:
       return Object.assign({}, state, {
         show: true,
         item: action.item,
+      });
+    case CLOSE_MODAL:
+      return Object.assign({}, state, {
+        show: false,
+        item: null,
       });
     default:
       return state;
