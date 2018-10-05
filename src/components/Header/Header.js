@@ -9,7 +9,7 @@ const Header = () => {
       <h1 className="Header-Title">{SITE_HEADLINE}</h1>
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="Header-Link"
         href={GITHUB_URL}>
         <Octicon size="medium" icon={MarkGithub} ariaLabel="Github Icon" />
