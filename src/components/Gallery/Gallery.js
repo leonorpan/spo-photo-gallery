@@ -27,7 +27,7 @@ class Gallery extends React.Component {
           ImgSrc={modalItem.webformatURL}
           Tags={modalItem.tags}
           Comments={modalItem.userComments}
-          onCommentSubmit={value => this.props.addComment(value, modalItem.id)}
+          onCommentSubmit={value => this.props.addComment(modalItem.id, value)}
         />
       </Modal>
     );
@@ -73,7 +73,7 @@ const mapStateToProps = ({ items, ui }) => {
 const mapDispatchToProps = dispatch => ({
   openModal: id => dispatch(openModal(id)),
   closeModal: () => dispatch(closeModal()),
-  addComment: (value, id) => dispatch(addComment(value, id)),
+  addComment: (id, value) => dispatch(addComment(id, value)),
 });
 
 export default connect(

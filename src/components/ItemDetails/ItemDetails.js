@@ -8,7 +8,7 @@ const ItemDetails = ({ ImgSrc, Tags, onCommentSubmit, Comments = [] }) => {
   return (
     <div className="Item-Details">
       <div className="Item-Img">
-        <img src={ImgSrc} alt="" />
+        <img src={ImgSrc} alt={Tags} />
       </div>
       <div className="Item-Info">
         <h3>Item Info:</h3>
