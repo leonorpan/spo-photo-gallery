@@ -14,6 +14,17 @@ const Header = () => {
         href={GITHUB_URL}>
         <Octicon size="medium" icon={MarkGithub} ariaLabel="Github Icon" />
       </a>
+      <div className="Pixabay">
+        <a
+          href="https://pixabay.com/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <img
+            src="https://pixabay.com/static/img/logo_square.svg"
+            alt="Pixabay"
+          />
+        </a>
+      </div>
     </header>
   );
 };
