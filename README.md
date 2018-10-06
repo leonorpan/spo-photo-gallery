@@ -25,4 +25,4 @@ The [Pixabay API](https://pixabay.com/api) is used for the images.
 
 `npm run build`
 
-Production build can be found on `public/` directory
+Production build can be found on `build/` directory
