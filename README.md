@@ -7,6 +7,8 @@
 
 [DEMO](https://gallant-bassi-19861d.netlify.com/)
 
+[![Edit spo-photo-gallery](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/leonorpan/spo-photo-gallery/tree/master/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 The [Pixabay API](https://pixabay.com/api) is used for the images.
