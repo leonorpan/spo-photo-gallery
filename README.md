@@ -5,6 +5,22 @@
 
 # A Photo Gallery Built with React
 
+[DEMO](https://gallant-bassi-19861d.netlify.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 The [Pixabay API](https://pixabay.com/api) is used for the images.
+
+## Install Dependencies
+
+`npm install`
+
+## Run locally
+
+`npm run start`
+
+## Build for production
+
+`npm run build`
+
+Production build can be found on `public/` directory
